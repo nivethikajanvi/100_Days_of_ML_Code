@@ -1,0 +1,60 @@
+APPLYING SKILLS IN PYTHON
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+print("Welcome to Nivii's Work")
+name =input("What is your name? ")
+age = int(input("What's your age ?"))
+print( "Hai",name,"you are",age,"years old.")
+
+is_older = age >= 18
+print(is_older)
+
+health  = 15
+
+if age>=18:
+    print("You are old eough!!")
+
+    want_to_play = input("Do you want to play ?,Y/N:  ")
+    if want_to_play == "Y":
+        print("You are starting with",health,"health")
+        print("Let's play!!")
+
+        weapon = input("Choose a weapon (sword/baton):  ")
+
+        left_or_right = input("first choice.....Left or Right...(left/right):  ")
+        if left_or_right=="left":
+            ans = input("Nice,you follow the path and reach a lake......Do you swim across or go around?(across/around)")
+
+            if ans == "around":
+                print("You went around and reached other side of the lake")
+                
+            elif ans == "across":
+                print("You were able to cross the lake ,but were bit by a fish and lost health")
+                health -=5
+
+            ans = input("You notice a house and a river.Where do you go to (river/house)")
+            if ans == "house":
+                print("The ower doesn't like you so lost 5 health")
+                health -=5
+
+                if health <=0:
+                    print("You are not healthy and lost the game")
+
+                else:
+                    print("You won")
+
+            else:
+                print("You fell down and lost")
+                
+
+        
+        else:
+            print("You fell down and lost")
+    else:
+        print("You can quit")
+elif age<=14:
+    print("You can play with supervision")
+else :
+    print("You are not old enough to play")
+    
